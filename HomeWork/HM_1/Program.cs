@@ -5,11 +5,11 @@ Console.Write("Введите число В ");
 int b = int.Parse(Console.ReadLine());
 
 int min = a;
-int max = a;
+int max = b;
 
-if (a > max) max = a; min = b;
-if (b > max) max = b; min = a;
-
-
+if (a > b) 
+{
+    max = a; min = b;
+    }
 Console.Write($"max= {max}, ");
 Console.Write($"min= {min}");
