@@ -8,30 +8,34 @@
 - Внутри функций (кроме функции вывода) НЕЛЬЗЯ использовать класс Console. Только в основном блоке кода или в функции вывода*/
 
 Console.Clear();
-int[] array = new int[8];
+Console.Clear();
+Console.Write("Введите длину массива: ");
+int n = int.Parse(Console.ReadLine());
 
-FillArray(array);
+int[] array = FillArray(n);
 PrintArray(array);
 
-void FillArray(int[] array)
+int[] FillArray(int n)
 {
-Random randGenegator = new Random();
-for (int i = 0; i < array.Length; i++)
-{
-array[i] = randGenegator.Next();
-}
+    int[] array = new int[n];
+    Random randGenegator = new Random();
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = randGenegator.Next();
+    }
+    return array;
 }
 
 void PrintArray(int[] array)
 {
-int count = array.Length;
-Console.Write("[");
-for (int i = 0; i < count; i++)
-{
-Console.Write(array[i]);
-if (i == count - 1)
-Console.WriteLine("]");
-else
-Console.Write(", ");
-}
+    int count = array.Length;
+    Console.Write("[");
+    for (int i = 0; i < count; i++)
+    {
+        Console.Write(array[i]);
+        if (i == count - 1)
+            Console.WriteLine("]");
+        else
+            Console.Write(", ");
+    }
 }
