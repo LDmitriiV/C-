@@ -13,20 +13,20 @@ Console.WriteLine($"Количество элементов от 10 до 99 ра
 
 int GetCount(int[] arr)
 {
-int count = 0;
-for (int i = 0; i < arr.Length; i++)
-{
-if (arr[i] >= 10 && arr[i] <= 99)
-count ++;
-}
-return count;
+    int count = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] >= 10 && arr[i] <= 99)
+            count++;
+    }
+    return count;
 }
 
 void FillArray(int[] array)
 {
-Random randGenegator = new Random();
-for (int i = 0; i < array.Length; i++)
-{
-array[i] = randGenegator.Next(0, 201);
-}
+    Random randGenegator = new Random();
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = randGenegator.Next(0, 201);
+    }
 }
