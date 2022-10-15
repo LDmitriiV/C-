@@ -24,15 +24,16 @@ int[,] array = new int[m, n];
 FillArray(array);
 PrintArray(array);
 
-Console.Write("Введите позицию элемента в строке массива: ");
-int i1 = int.Parse(Console.ReadLine()!);
-Console.Write("Введите позицию элемента в столбце массива: ");
-int j1 = int.Parse(Console.ReadLine()!);
-
 SearchElementOfArray(array);
 
 void SearchElementOfArray(int[,] array)
 {
+    Console.Write("Введите позицию элемента в строке массива: ");
+    int i1 = int.Parse(Console.ReadLine()!);
+    Console.Write("Введите позицию элемента в столбце массива: ");
+    int j1 = int.Parse(Console.ReadLine()!);
+
+
     if (i1 <= array.GetLength(0))
     {
         if (j1 <= array.GetLength(1))
