@@ -5,40 +5,40 @@
 11 16 15 06
 10 09 08 07 */
 
-int n = 4;
-int[,] sqareMatrix = new int[n, n];
+Console.Clear();
 
-int temp = 1;
-int i = 0;
-int j = 0;
+int[,] mattrix = new int[4, 4];
 
-while (temp <= sqareMatrix.GetLength(0) * sqareMatrix.GetLength(1))
+CreateMattrix(mattrix);
+WriteMattrix(mattrix);
+
+void CreateMattrix(int[,] mattrix, int i = 0, int j = 0)
 {
-  sqareMatrix[i, j] = temp;
-  temp++;
-  if (i <= j + 1 && i + j < sqareMatrix.GetLength(1) - 1)
-    j++;
-  else if (i < j && i + j >= sqareMatrix.GetLength(0) - 1)
-    i++;
-  else if (i >= j && i + j > sqareMatrix.GetLength(1) - 1)
-    j--;
-  else
-    i--;
+    for (int temp = 1; temp <= mattrix.GetLength(0) * mattrix.GetLength(1); temp++)
+    {
+        mattrix[i, j] = temp;
+        if (i <= j + 1 && i + j < mattrix.GetLength(1) - 1)
+            j++;
+        else if (i < j && i + j >= mattrix.GetLength(0) - 1)
+            i++;
+        else if (i >= j && i + j > mattrix.GetLength(1) - 1)
+            j--;
+        else
+            i--;
+    }
 }
 
-WriteArray(sqareMatrix);
-
-void WriteArray (int[,] array)
+void WriteMattrix(int[,] mattrix)
 {
-  for (int i = 0; i < array.GetLength(0); i++)
-  {
-    for (int j = 0; j < array.GetLength(1); j++)
+    for (int i = 0; i < mattrix.GetLength(0); i++)
     {
-      if (array[i,j] / 10 <= 0)
-      Console.Write($" {array[i,j]} ");
+        for (int j = 0; j < mattrix.GetLength(1); j++)
+        {
+            if (mattrix[i, j] / 10 <= 0)
+                Console.Write($" {mattrix[i, j]} ");
 
-      else Console.Write($"{array[i,j]} ");
+            else Console.Write($"{mattrix[i, j]} ");
+        }
+        Console.WriteLine();
     }
-    Console.WriteLine();
-  }
 }

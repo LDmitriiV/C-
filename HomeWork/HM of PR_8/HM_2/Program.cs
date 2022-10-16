@@ -42,7 +42,7 @@ int SearchOfLowestSum(int[,] matrix)
 
 void RowsWithLowestSum(int[,] matrix)
 {
-    for (int i = 1; i < matrix.GetLength(0); i++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
         if (SearchOfLowestSum(matrix) == SumElementsOfRow(matrix, i))
             Console.Write($"{i + 1}, ");
