@@ -7,14 +7,14 @@ N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1" */
 Console.Clear();
 Console.Write("Введите значение N: ");
 int n = int.Parse(Console.ReadLine()!);
-Recu(n);
+Recution(n);
 
-void Recu(int n)
+void Recution(int n)
 {
     if (n != 0)
     {
         Console.Write(n + ", ");
         n = n - 1;
-        Recu(n);
+        Recution(n);
     }
 }
