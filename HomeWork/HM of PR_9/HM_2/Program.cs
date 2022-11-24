@@ -14,17 +14,17 @@ int result = 0;
 if (m < n)
 {
     int i = m;
-    Recution(m, n, i);
+    Recursion(m, n, i);
 }
 else
 {
     int i = n;
-    Recution(m, n, i);
+    Recursion(m, n, i);
 }
 
 Console.Write(result);
 
-void Recution(int m, int n, int i)
+void Recursion(int m, int n, int i)
 {
     if (m < n)
     {
@@ -32,7 +32,7 @@ void Recution(int m, int n, int i)
         {
             result = result + i;
             i++;
-            Recution(m, n, i);
+            Recursion(m, n, i);
         }
     }
     if (m > n)
@@ -41,7 +41,7 @@ void Recution(int m, int n, int i)
         {
             result = result + i;
             i++;
-            Recution(m, n, i);
+            Recursion(m, n, i);
         }
     }
 }

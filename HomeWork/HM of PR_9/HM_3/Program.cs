@@ -9,7 +9,7 @@ int m = int.Parse(Console.ReadLine()!);
 Console.Write("Введите неотрицательное значение n: ");
 int n = int.Parse(Console.ReadLine()!);
 
-Console.Write(AkkermanFunction(m, n)); 
+Console.Write(AkkermanFunction(m, n));
 
 int AkkermanFunction(int m, int n)
 {
