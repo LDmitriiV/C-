@@ -16,4 +16,4 @@
 7. Вывод в терминал окончательного массива
 
 ## **Блок-схема**
-![*Здесь могла бы быть Ваша реклама*](Final_test\Images\Diagram.jpg)
+![*Здесь могла бы быть Ваша реклама*](https://github.com/LDmitriiV/C-/blob/main/Final_test/Images/Diagram.jpg)
