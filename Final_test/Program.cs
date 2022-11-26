@@ -1,9 +1,10 @@
 ﻿Console.Clear();
-
 Console.WriteLine("Введите значения через запятую");
 string input = Console.ReadLine()!;
+
 string[] array = input.Split(new Char[] {','});
 string[] finalArray = ArrayLessThreeDigits(array);
+
 PrintArray(finalArray);
 
 string[] ArrayLessThreeDigits(string[] array)
